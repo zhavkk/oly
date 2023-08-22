@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        /* Добавляем стили для заднего фона */
+        body {
+            background-image: url("{{ url_for('static', filename='cover3.jpg') }}");
+            background-size: cover; /* Чтобы изображение заполнило весь фон */
+            background-repeat: no-repeat; /* Запрет повторения фона */
+        }
+    </style>
+</head>
+<body>
+    <h1>Processed Video</h1>
+    <video controls>
+        <source src="{{ video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

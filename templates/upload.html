@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        /* Добавляем стили для заднего фона */
+        body {
+            background-image: url("{{ url_for('static', filename='cover3.jpg') }}");
+            background-size: cover; /* Чтобы изображение заполнило весь фон */
+            background-repeat: no-repeat; /* Запрет повторения фона */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload a Video</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
